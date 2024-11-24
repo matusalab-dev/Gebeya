@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1e1e1e;
+  --purple: #9847ef;
+
+  --font-xl: clamp(2rem, 6vw + 1rem, 8rem);
+  --font-para: clamp(0.75rem, 2vw + 0.75rem, 1.25rem);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  /* font-family: var(--font-poppins), Arial, Helvetica, sans-serif; */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .full-bleed {
+    box-shadow: 0 0 0 100vmax var(--purple);
+    clip-path: inset(0-100vmax);
+  }
+  .inverse {
+    background: var(--purple);
+  }
+}
