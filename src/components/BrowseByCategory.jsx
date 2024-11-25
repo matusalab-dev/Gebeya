@@ -20,9 +20,10 @@ const BrowseByCategory = () => {
     <section>
       <ProductHeader heading="Browse by category" />
       <div className="flex justify-between gap-1 overflow-x-auto">
-        {CATEGORIES_LABEL.map(({ label, imageUrl, count }) => {
+        {CATEGORIES_LABEL.map(({ label, imageUrl, count }, index) => {
           return (
             <CategoryCard
+              key={index}
               headingText={label}
               paraText={`Over ${count} categories in stock`}
               imageUrl={imageUrl}

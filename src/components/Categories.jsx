@@ -34,12 +34,12 @@ const Categories = () => {
   return (
     <section className="flex flex-col space-y-14">
       <div className="flex gap-4 overflow-x-auto md:gap-6">
-        {CATEGORIES_OPTIONS.map(({ label }) => {
+        {CATEGORIES_OPTIONS.map(({ label }, index) => {
           const isActive = activeCategory === label;
 
           return (
             <button
-              key={label}
+              key={index}
               onClick={() => setActiveCategory(label)}
               className={`${
                 isActive && "bg-orange text-background"
@@ -57,9 +57,12 @@ const Categories = () => {
             <h3>No Products listed on this category</h3>
           </div>
         ) : (
-          filteredProducts.map(({ imageUrl, type }) => {
+          filteredProducts.map(({ imageUrl, type }, index) => {
             return (
-              <div className="flex flex-col items-center px-4 py-3 space-y-3 border sm:px-7 sm:py-6 rounded-xl border-grey-200">
+              <div
+                key={index}
+                className="flex flex-col items-center px-4 py-3 space-y-3 border sm:px-7 sm:py-6 rounded-xl border-grey-200"
+              >
                 <div className="px-7 py-[0.436rem] sm:py-[0.623rem] sm:px-[1.88rem] bg-grey-300">
                   <Image
                     src={imageUrl}
