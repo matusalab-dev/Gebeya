@@ -1,5 +1,5 @@
 const WomenPage = () => {
-  return <div>Women's Page</div>;
+  return <div>Womens Page</div>;
 };
 
 export default WomenPage;

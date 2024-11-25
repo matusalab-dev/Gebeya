@@ -17,16 +17,17 @@ export const SECONDARY_HOVEROVER_LINKS = [
   { label: "Pyjamas", href: "pyjamas" },
   { label: "Slippers", href: "slippers" },
 ];
-const ButtonHoverOver = ({ icon, label, links }) => {
+const ButtonHoverOver = ({ icon, label, links, className }) => {
   const pathname = usePathname();
 
   return (
-    <button className="relative flex items-center gap-1 group">
+    <button className="relative flex items-center gap-1 min-w-max group">
       {icon}
       {label}
       {
         <Image
           src={DownCaretIcon}
+          alt="down arrow to see more"
           className="size-[16px] group-hover:rotate-180"
         />
       }
@@ -36,7 +37,7 @@ const ButtonHoverOver = ({ icon, label, links }) => {
             <Link
               key={links.href}
               href={links.href}
-              className={`py-2 border-b-[1px] text-center w-3/5 mx-auto border-grey-200 last:border-b-0 border-b-grey-200 ${
+              className={`py-2 border-b-[1px] text-center  border-grey-200 last:border-b-0 border-b-grey-200 ${className} ${
                 pathname === links.href
               } ? 'font-semibold':'' `}
             >

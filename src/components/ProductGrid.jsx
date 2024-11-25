@@ -88,7 +88,7 @@ export const PRODUCTS_INFO = [
 
 const ProductGrid = () => {
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 overflow-x-scroll overscroll-x-contain">
       {PRODUCTS_INFO.map((product, index) => (
         <ProductCard key={index} {...product} />
       ))}

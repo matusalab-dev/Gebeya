@@ -6,12 +6,12 @@ const ProductHeader = ({ heading }) => {
         {heading}
       </h2>
       <div className="self-center hidden gap-8 md:flex">
-        <div className="p-4 bg-orange rounded-tl-xl rounded-bl-xl">
+        <button className="p-4 bg-orange rounded-tl-xl rounded-bl-xl">
           <ArrowIcon className="rotate-90" />
-        </div>
-        <div className="p-4 bg-orange rounded-tr-xl rounded-br-xl">
+        </button>
+        <button className="p-4 bg-orange rounded-tr-xl rounded-br-xl">
           <ArrowIcon className="-rotate-90" />
-        </div>
+        </button>
       </div>
     </div>
   );

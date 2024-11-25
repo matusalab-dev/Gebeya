@@ -3,6 +3,7 @@ import LatestCollection from "../components/LatestCollection";
 import Categories from "../components/Categories";
 import ImageWithText from "../components/ImageWithText";
 import BrowseByCategory from "../components/BrowseByCategory";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <ImageWithText />
         <BrowseByCategory />
       </main>
+      <Footer />
     </>
   );
 }

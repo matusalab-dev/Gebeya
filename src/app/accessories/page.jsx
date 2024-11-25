@@ -1,5 +1,5 @@
 const AccessoriesPage = () => {
-  return <div>accessories's Page</div>;
+  return <div>accessories Page</div>;
 };
 
 export default AccessoriesPage;

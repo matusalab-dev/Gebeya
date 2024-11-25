@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import HeartOutline from "../../assets/icons/heart-outline";
 import StarIcon from "../../assets/icons/star1.png";
+import Link from "next/link";
 
 const ProductCard = ({
   name,
@@ -32,7 +33,6 @@ const ProductCard = ({
         </div>
         <div className="flex justify-between">
           <p className="px-2 py-[0.2rem] border rounded-xl border-grey-100">
-            {/* women */}
             {category}
           </p>
           <div className="flex items-center gap-[2px] text-light_black ">
@@ -42,18 +42,12 @@ const ProductCard = ({
         <div className="flex justify-between">
           <div className="flex flex-col gap-10 text-base font-semibold capitalize md:text-2xl">
             <div>
-              <h2>
-                {/* French Kiss bag */}
-                {name}
-              </h2>
+              <Link href="category/type/sub-category">{name}</Link>
               <h3 className="text-lg font-medium uppercase text-grey-200">
-                {/* Aldo */}
                 {brand}
               </h3>
             </div>
-            <h4 className="">
-              {/* $500 */}${price}
-            </h4>
+            <h4 className="">${price}</h4>
           </div>
           <button className="self-end text-sm md:text-xl font-medium rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background">
             Add to cart
