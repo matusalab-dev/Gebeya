@@ -127,7 +127,7 @@ const CartPage = () => {
                 Save for later
               </button>
               <Link
-                href="/check-out"
+                href="/checkout"
                 className="inline-block px-16 py-3 font-semibold text-center md:py-3 text-background rounded-xl bg-orange"
               >
                 Buy now
