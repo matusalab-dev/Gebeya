@@ -42,9 +42,15 @@ const Footer = () => {
           className="w-24 h-16 min-w-10 justify-self-start"
         />
         <div className="flex justify-center gap-6 sm:gap-4">
-          <InstaIcon />
-          <WhatsIcon />
-          <TwitterIcon />
+          <Link href="/instagram">
+            <InstaIcon />
+          </Link>
+          <Link href="/whatsup">
+            <WhatsIcon />
+          </Link>
+          <Link href="/x">
+            <TwitterIcon />
+          </Link>
         </div>
       </div>
       <nav className="border-b-[1px] basis-full sm:basis-auto border-background flex flex-col md:flex-row py-12 md:py-[6.75rem] items-start justify-between gap-10 capitalize text-background">

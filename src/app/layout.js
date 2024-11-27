@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../components/Header";
 import NavBar from "../components/nav-bar/NavBar";
+import Footer from "../components/Footer";
 
 const poppins = localFont({
   src: [
@@ -57,6 +58,7 @@ export default function RootLayout({ children }) {
           <NavBar />
         </Header>
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -49,7 +49,7 @@ const ProductCard = ({
             <h4 className="">${price}</h4>
           </div>
           <Link
-            href="/kids/shoes/sneakers/cart"
+            href="/cart"
             className="self-end text-sm md:text-xl font-medium rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background"
           >
             Add to cart

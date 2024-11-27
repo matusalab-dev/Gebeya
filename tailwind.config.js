@@ -24,6 +24,7 @@ module.exports = {
         100: "#222222",
         300: "#1E1E1E",
       },
+      green: "#006200",
     },
 
     boxShadow: {

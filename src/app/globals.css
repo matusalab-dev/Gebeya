@@ -28,4 +28,11 @@ body {
   .inverse {
     background: var(--purple);
   }
+  .full-bleed-grey {
+    box-shadow: 0 0 0 100vmax #f2f2f2;
+    clip-path: inset(0-100vmax);
+  }
+  .inverse-grey {
+    background: #f2f2f2;
+  }
 }

@@ -5,7 +5,7 @@ import CartBadge from "./CartBadge";
 const Cart = () => {
   return (
     <Link href="/cart" className="relative flex">
-      <CartIcon />
+      <CartIcon background="white" />
       <CartBadge />
     </Link>
   );
