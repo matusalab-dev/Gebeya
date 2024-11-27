@@ -45,13 +45,14 @@ const ProductCard = (product) => {
             </div>
             <h4 className="">${price}</h4>
           </div>
-          <Link
-            href="/cart"
-            onClick={() => handleAddToCart(selectedProduct, qty)}
-            className="self-end text-sm md:text-xl font-medium rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background"
-          >
-            Add to cart
-          </Link>
+          <button onClick={() => handleAddToCart(product, qty)}>
+            <Link
+              href="/cart"
+              className="self-end text-sm md:text-xl font-medium rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background"
+            >
+              Add to cart
+            </Link>
+          </button>
         </div>
       </div>
     </div>
