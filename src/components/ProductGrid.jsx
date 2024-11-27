@@ -17,49 +17,27 @@ export const PRODUCTS_INFO = [
     type: "bags",
     inStock: true,
   },
+  {
+    name: "french kiss bag",
+    imageUrl: FrenchKissBag,
+    category: "women",
+    products: [],
+    brand: "aldo",
+    price: "500",
+    rating: "2k+",
+    type: "bags",
+    inStock: true,
+  },
+  {
+    name: "alvero gown",
+    imageUrl: AlveroGown,
+    category: "women",
+    products: [],
+    brand: "divine",
+    price: "300",
+    rating: "5k+",
+    type: "clothes",
 
-  {
-    name: "Butline",
-    imageUrl: jacket,
-    category: "women",
-    products: [],
-    brand: "aldo",
-    price: "500",
-    rating: "2k+",
-    type: "bags",
-    inStock: true,
-  },
-  {
-    name: "french kiss bag",
-    imageUrl: FrenchKissBag,
-    category: "women",
-    products: [],
-    brand: "aldo",
-    price: "500",
-    rating: "2k+",
-    type: "bags",
-    inStock: true,
-  },
-  {
-    name: "french kiss bag",
-    imageUrl: FrenchKissBag,
-    category: "women",
-    products: [],
-    brand: "aldo",
-    price: "500",
-    rating: "2k+",
-    type: "bags",
-    inStock: true,
-  },
-  {
-    name: "Butline",
-    imageUrl: jacket,
-    category: "women",
-    products: [],
-    brand: "aldo",
-    price: "500",
-    rating: "2k+",
-    type: "bags",
     inStock: true,
   },
   {
@@ -86,11 +64,34 @@ export const PRODUCTS_INFO = [
 
     inStock: true,
   },
+  {
+    name: "french kiss bag",
+    imageUrl: FrenchKissBag,
+    category: "women",
+    products: [],
+    brand: "aldo",
+    price: "500",
+    rating: "2k+",
+    type: "bags",
+    inStock: true,
+  },
+  {
+    name: "alvero gown",
+    imageUrl: AlveroGown,
+    category: "women",
+    products: [],
+    brand: "divine",
+    price: "300",
+    rating: "5k+",
+    type: "clothes",
+
+    inStock: true,
+  },
 ];
 
 const ProductGrid = () => {
   return (
-    <div className="flex gap-6 overflow-x-scroll overscroll-x-contain">
+    <div className="flex gap-4 overflow-x-scroll overscroll-x-contain">
       {PRODUCTS_INFO.map((product, index) => (
         <ProductCard key={index} {...product} />
       ))}
