@@ -117,10 +117,9 @@ const CheckoutPage = () => {
             <div className="flex justify-between">
               <p className="text-light_black">Total</p> <p>$165</p>
             </div>
-            <Button
-              children="place order"
-              className="order-1 w-full md:w-[90%] py-3 mt-6 mx-auto text-background"
-            />
+            <Button className="order-1 w-full md:w-[90%] py-3 mt-6 mx-auto text-background">
+              place order
+            </Button>
           </div>
         </div>
       </div>
