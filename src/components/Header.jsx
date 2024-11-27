@@ -1,12 +1,7 @@
-import Hero from "./Hero";
-import NavBar from "./NavBar";
+import { cn } from "../lib/utils";
 
-const Header = () => {
-  return (
-    <header className="md:min-h-screen ">
-      <Hero />
-    </header>
-  );
+const Header = ({ className, children }) => {
+  return <header className={`${cn("", className)}`}>{children}</header>;
 };
 
 export default Header;

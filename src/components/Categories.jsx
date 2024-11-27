@@ -29,7 +29,7 @@ const Categories = () => {
   const filteredProducts = PRODUCTS_INFO.filter(
     (product) => product.category === activeCategory
   );
-  const doesProductExists = filteredProducts.length === 0;
+  const productDoesNotExist = filteredProducts.length === 0;
 
   return (
     <section className="flex flex-col space-y-14">
@@ -50,25 +50,29 @@ const Categories = () => {
           );
         })}
       </div>
-      <div className="flex justify-start gap-4 overflow-x-scroll flex-nowrap lg:gap-6 md:gap-3 overscroll-x-contain ">
-        {doesProductExists ? (
-          <div className="flex flex-col items-center justify-center w-full text-center text-light_black">
+      <div
+        className={`${
+          productDoesNotExist && "place-content-center"
+        } grid grid-cols-2 gap-4 place-content-center md:grid-cols-3 lg:grid-cols-6  lg:gap-6 md:gap-3`}
+      >
+        {productDoesNotExist ? (
+          <div className="w-64 mx-auto text-center text-light_black">
             <p className="text-xl font-alfa">oops!</p>
-            <h3>No Products listed on this category</h3>
+            <p>No Products listed on this category</p>
           </div>
         ) : (
           filteredProducts.map(({ imageUrl, type }, index) => {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center px-4 py-3 space-y-3 border sm:px-7 sm:py-6 rounded-xl border-grey-200"
+                className="flex flex-col items-center px-4 py-4 space-y-3 border sm:px-7 sm:py-6 rounded-xl border-grey-200"
               >
-                <div className="px-7 py-[0.436rem] sm:py-[0.623rem] sm:px-[1.88rem] bg-grey-300">
+                <div className="px-9 py-[0.5rem] sm:py-[0.623rem] sm:px-[1.88rem] rounded-lg bg-grey-300">
                   <Image
                     src={imageUrl}
                     width="81"
                     height="81"
-                    className="w-[3.75rem] h-[3.75rem] w-[5.064rem] h-[5.064rem]"
+                    className="w-[3.813rem] h-[3.813rem] sm:w-[5.064rem] sm:h-[5.064rem]"
                   />
                 </div>
                 <h4 className="text-base font-semibold capitalize sm:text-2xl text-light_black ">
@@ -82,7 +86,7 @@ const Categories = () => {
           })
         )}
       </div>
-      {!doesProductExists && (
+      {!productDoesNotExist && (
         <button className="flex items-center gap-[6px] px-8 justify-center py-[10.5px] mx-auto text-base font-medium rounded-sm text-background bg-purple">
           see more <SeeMoreArrow />
         </button>

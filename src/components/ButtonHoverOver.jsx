@@ -4,6 +4,7 @@ import Link from "next/link";
 import UserIcon from "../../assets/icons/bxs_user.png";
 import DownCaretIcon from "../../assets/icons/down.png";
 import { usePathname } from "next/navigation";
+import { cn } from "../lib/utils";
 
 export const PRIMARY_HOVEROVER_LINKS = [
   { label: "Register", href: "register" },
@@ -17,11 +18,16 @@ export const SECONDARY_HOVEROVER_LINKS = [
   { label: "Pyjamas", href: "pyjamas" },
   { label: "Slippers", href: "slippers" },
 ];
-const ButtonHoverOver = ({ icon, label, links, className }) => {
+const ButtonHoverOver = ({ icon, label, links, className, styleButton }) => {
   const pathname = usePathname();
 
   return (
-    <button className="relative flex items-center gap-1 min-w-max group">
+    <button
+      className={`${cn(
+        "relative flex items-center gap-1 min-w-max group",
+        styleButton
+      )}`}
+    >
       {icon}
       {label}
       {

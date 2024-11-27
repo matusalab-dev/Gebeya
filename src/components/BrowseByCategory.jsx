@@ -19,7 +19,7 @@ const BrowseByCategory = () => {
   return (
     <section>
       <ProductHeader heading="Browse by category" />
-      <div className="flex justify-between gap-1 overflow-x-auto">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {CATEGORIES_LABEL.map(({ label, imageUrl, count }, index) => {
           return (
             <CategoryCard
@@ -28,7 +28,7 @@ const BrowseByCategory = () => {
               paraText={`Over ${count} categories in stock`}
               imageUrl={imageUrl}
               styleWrapper="p-0 sm:p-0 gap-6 border-none"
-              styleImageWrapper="rounded-lg p-2 sm:p-6"
+              styleImageWrapper="rounded-lg p-2 sm:p-16"
               styleImage="size-[124px] md:size-[243px]"
             />
           );

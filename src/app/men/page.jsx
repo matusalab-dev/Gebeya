@@ -1,5 +1,7 @@
 const MenPage = () => {
-  return <div>Mens Page</div>;
+  return (
+    <div className="flex place-content-center text-light_black">Mens Page</div>
+  );
 };
 
 export default MenPage;

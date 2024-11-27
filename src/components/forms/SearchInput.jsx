@@ -12,7 +12,7 @@ const SearchInput = () => {
       <input
         type="search"
         name="query"
-        className="pl-7 w-[197px] sm:w-full text-[16px] border rounded-tl-xl rounded-bl-xl  text-light_black/70 focus:!border-grey-500 border-r-0 focus:outline-none focus-within:outline-grey-500"
+        className="pl-7 w-[197px] min-w-32 sm:w-full text-[16px] border rounded-tl-xl rounded-bl-xl  text-light_black/70 focus:!border-grey-500 border-r-0 focus:outline-none focus-within:outline-grey-500"
         placeholder="search"
       />
       <button className="flex items-center bg-purple py-2 pl-[23px] pr-[31px] rounded-tr-xl rounded-br-xl">

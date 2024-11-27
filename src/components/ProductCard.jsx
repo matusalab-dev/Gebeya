@@ -21,7 +21,6 @@ const ProductCard = ({
             <HeartOutline />
           </div>
           <Image
-            // src={bagProduct}
             src={imageUrl}
             width="227"
             height="141"
@@ -49,9 +48,12 @@ const ProductCard = ({
             </div>
             <h4 className="">${price}</h4>
           </div>
-          <button className="self-end text-sm md:text-xl font-medium rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background">
+          <Link
+            href="/kids/shoes/sneakers/cart"
+            className="self-end text-sm md:text-xl font-medium rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background"
+          >
             Add to cart
-          </button>
+          </Link>
         </div>
       </div>
     </div>

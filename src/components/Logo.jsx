@@ -5,9 +5,9 @@ import LogoImage from "../../assets/gebeya-logo.png";
 import { cn } from "../lib/utils";
 const Logo = ({ logoImage = LogoImage, className }) => {
   return (
-    <Link href="/" className="">
+    <Link href="/" className="inline-block">
       <Image
-        src={LogoImage}
+        src={logoImage}
         className={`${cn(
           "object-cover w-full h-full min-w-8 size-8",
           className
