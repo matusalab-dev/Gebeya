@@ -13,20 +13,36 @@ import ReturnIcon from "../../../assets/icons/return-icon";
 import Link from "next/link";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import InstaIcon from "../../../assets/icons/insta-icon";
+import WhatsIcon from "../../../assets/icons/whats-icon";
+import TwitterIcon from "../../../assets/icons/twitter-icon";
+import ArrowIcon from "../../../assets/icons/arrow-icon";
 
 const CartPage = () => {
   const { handleInc, handleDec, qty, cartItems } = useContext(CartContext);
   return (
     <section className="flex flex-col gap-8 pt-12 bg-grey-300 inverse-grey full-bleed-grey">
+      <div className="flex items-center gap-3">
+        <Link href="/">Home</Link>{" "}
+        <ArrowIcon
+          strokeColor="#808080"
+          className="-rotate-90 text-light_black"
+        />{" "}
+        <Link href="/kids">Kids</Link>{" "}
+        <ArrowIcon strokeColor="#808080" className="-rotate-90" />{" "}
+        <Link href="shoes">Shoes</Link>{" "}
+        <ArrowIcon strokeColor="#808080" className="-rotate-90" />
+        <Link href="/sneakers"> Sneakers</Link>{" "}
+      </div>
       <div className="flex flex-col gap-4 font-poppins md:flex-col lg:flex-row">
         {/* cart-items list */}
         {cartItems.length < 1 && (
-          <div className="flex flex-col items-center justify-center gap-2 text-[1rem] px-16 bg-background">
+          <div className="flex flex-col items-center justify-center gap-2 text-[1rem] px-16 py-12 bg-background">
             <h2 className="text-lg font-medium"> your shopping bug is empty</h2>
             <Link
               title="go back to shopping"
               href="/"
-              className="items-center self-center inline-block px-3 pb-1 [letter-spacing:3px] capitalize border-b-2 border-b-grey-200 bg-primary-black text-primary-white"
+              className="items-center self-center inline-block px-3 pb-1 [letter-spacing:2px] bg-primary-black text-primary-white"
             >
               go back to shopping
             </Link>
@@ -45,7 +61,7 @@ const CartPage = () => {
                     className="sm:w-[261px] sm:h-[261px] mx-auto"
                   />
                 </div>
-                <div className="flex justify-between flex-1 gap-2">
+                <div className="flex items-start justify-between gap-2">
                   <div className="bg-grey-300 w-14 h-14">
                     <Image src={imageUrl} width="56" height="56" />
                   </div>
@@ -62,6 +78,20 @@ const CartPage = () => {
                       height="56"
                       className="w-full h-full"
                     />
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center gap-3 mt-4">
+                  <p>Share this product</p>
+                  <div className="flex items-center gap-2">
+                    <Link href="/">
+                      <InstaIcon strokeColor="black" />
+                    </Link>
+                    <Link href="/">
+                      <WhatsIcon strokeColor="black" />
+                    </Link>
+                    <Link href="/">
+                      <TwitterIcon strokeColor="black" />
+                    </Link>
                   </div>
                 </div>
               </div>

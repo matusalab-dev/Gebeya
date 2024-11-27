@@ -1,6 +1,8 @@
 const MenPage = () => {
   return (
-    <div className="flex place-content-center text-light_black">Mens Page</div>
+    <div className="flex items-center justify-center text-2xl h-[40vh] text-light_black">
+      Mens Page
+    </div>
   );
 };
 
