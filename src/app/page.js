@@ -12,7 +12,7 @@ export default function Home() {
       <Header className="md:min-h-screen">
         <Hero />
       </Header>
-      <main className="space-y-20">
+      <main className="mb-12 space-y-20">
         <LatestCollection />
         <Categories />
         <ImageWithText />

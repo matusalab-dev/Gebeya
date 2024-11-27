@@ -5,6 +5,7 @@ import WhatsIcon from "../../assets/icons/whats-icon";
 import TwitterIcon from "../../assets/icons/twitter-icon";
 import Link from "next/link";
 import ArrowIcon from "../../assets/icons/arrow-icon";
+import { cn } from "../lib/utils";
 
 const sections = [
   {
@@ -33,9 +34,14 @@ const sections = [
   },
 ];
 
-const Footer = () => {
+const Footer = ({ className }) => {
   return (
-    <footer className="flex flex-col justify-between gap-0 mt-20 md:flex-row bg-purple inverse full-bleed">
+    <footer
+      className={`${cn(
+        "flex flex-col justify-between gap-0 mt-20 md:flex-row bg-purple inverse full-bleed",
+        className
+      )}`}
+    >
       <div className="order-1 md:order-none flex flex-col items-center gap-10 sm:gap-16 py-12 md:py-[6.75rem] ">
         <Logo
           logoImage={LogoImageFooter}

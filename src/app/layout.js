@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
             <NavBar />
           </Header>
           {children}
-          <Footer />
+          <Footer className="mt-0" />
         </CartProvider>
       </body>
     </html>
