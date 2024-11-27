@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 import BurberryShine from "../../../assets/img/Burberry_Shine.png";
@@ -10,8 +11,11 @@ import CartIcon from "../../../assets/icons/cart-icon";
 import DeliveryIcon from "../../../assets/icons/delivery-truck-icon";
 import ReturnIcon from "../../../assets/icons/return-icon";
 import Link from "next/link";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 const CartPage = () => {
+  const { handleInc, handleDec, qty } = useContext(CartContext);
   return (
     <section className="flex flex-col gap-8 pt-12 bg-grey-300 inverse-grey full-bleed-grey">
       <div className="flex flex-col gap-4 font-poppins md:flex-col lg:flex-row">
@@ -79,11 +83,17 @@ const CartPage = () => {
             <div className="flex items-center gap-2">
               <p>Quantity:</p>
               <div className="flex items-center gap-3 border rounded-sm border-light_black">
-                <button className="self-center px-3 py-1 border-r rounded-tl-sm rounded-bl-sm text-background bg-orange">
+                <button
+                  onClick={() => handleDec()}
+                  className="self-center px-3 py-1 border-r rounded-tl-sm rounded-bl-sm text-background bg-orange"
+                >
                   -
                 </button>
-                <p className="font-medium">1</p>
-                <button className="self-center px-3 py-1 border-l rounded-tr-sm rounded-br-sm text-background border-l-light_black bg-orange">
+                <p className="font-medium">{qty}</p>
+                <button
+                  onClick={() => handleInc()}
+                  className="self-center px-3 py-1 border-l rounded-tr-sm rounded-br-sm text-background border-l-light_black bg-orange"
+                >
                   +
                 </button>
               </div>

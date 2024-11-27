@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 
 import HeartOutline from "../../assets/icons/heart-outline";
 import StarIcon from "../../assets/icons/star1.png";
 import Link from "next/link";
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react";
 
 const ProductCard = ({
   name,
@@ -13,6 +16,7 @@ const ProductCard = ({
   rating,
   inStock,
 }) => {
+  const { handleAddToCart, qty } = useContext(CartContext);
   return (
     <div className="py-4">
       <div className="flex flex-col gap-4 p-4 space-y-6 border border-grey-100 rounded-xl">
@@ -50,6 +54,7 @@ const ProductCard = ({
           </div>
           <Link
             href="/cart"
+            onClick={() => handleAddToCart(currentProduct, qty)}
             className="self-end text-sm md:text-xl font-medium rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background"
           >
             Add to cart

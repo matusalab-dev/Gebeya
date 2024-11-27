@@ -1,8 +1,10 @@
 import localFont from "next/font/local";
 import "./globals.css";
+
 import Header from "../components/Header";
 import NavBar from "../components/nav-bar/NavBar";
 import Footer from "../components/Footer";
+import CartProvider from "../context/CartContext";
 
 const poppins = localFont({
   src: [
@@ -54,11 +56,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} ${alfaSlabOne.variable}  font-poppins antialiased max-w-[98%] 2xl:max-w-screen-7xl mx-auto px-3 xs:px-2`}
       >
-        <Header>
-          <NavBar />
-        </Header>
-        {children}
-        <Footer />
+        <CartProvider>
+          <Header>
+            <NavBar />
+          </Header>
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
