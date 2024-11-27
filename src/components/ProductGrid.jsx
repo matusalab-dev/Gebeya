@@ -1,6 +1,7 @@
 import ProductCard from "./ProductCard";
 
 import FrenchKissBag from "../../assets/img/french_kiss_bag.png";
+import jacket from "../../assets/img/Jacket.webp";
 import BurberryShine from "../../assets/img/Burberry_Shine.png";
 import AlveroGown from "../../assets/img/Alvero_Gown.png";
 
@@ -19,7 +20,7 @@ export const PRODUCTS_INFO = [
 
   {
     name: "Butline",
-    imageUrl: FrenchKissBag,
+    imageUrl: jacket,
     category: "women",
     products: [],
     brand: "aldo",
@@ -42,6 +43,17 @@ export const PRODUCTS_INFO = [
   {
     name: "french kiss bag",
     imageUrl: FrenchKissBag,
+    category: "women",
+    products: [],
+    brand: "aldo",
+    price: "500",
+    rating: "2k+",
+    type: "bags",
+    inStock: true,
+  },
+  {
+    name: "Butline",
+    imageUrl: jacket,
     category: "women",
     products: [],
     brand: "aldo",

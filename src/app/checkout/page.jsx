@@ -1,11 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import BurberryShine from "../../../assets/img/Burberry_Shine.png";
 import CardIcon from "../../../assets/icons/card.png";
 import WalletIcon from "../../../assets/icons/wallet.png";
 import BankTransferIcon from "../../../assets/icons/bank.png";
 import Button from "../../components/Button";
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
 
 const CheckoutPage = () => {
+  const { cartItems } = useContext(CartContext);
+
   return (
     <section className="relative flex flex-col gap-8 py-12 bg-grey-300 inverse-grey full-bleed-grey">
       <div className="flex flex-col gap-14 md:gap-4 font-poppins md:flex-col lg:flex-row">
@@ -92,35 +98,55 @@ const CheckoutPage = () => {
             order summary
           </h6>
           <div className="flex gap-3 mt-6">
-            <div className="p-2 bg-grey-300">
-              <Image src={BurberryShine} width="82" height="82" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-lg font-medium">Burberry shine</h3>
-              <p className="uppercase text-grey-200">fendi</p>
-            </div>
+            {cartItems.length > 0 ? (
+              cartItems.map((cartItem) => (
+                <>
+                  {" "}
+                  <div className="p-2 bg-grey-300">
+                    <Image src={cartItem.imageUrl} width="72" height="72" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg font-medium">{cartItem.name}</h3>
+                    <p className="uppercase text-grey-200">{cartItem.brand}</p>
+                  </div>
+                </>
+              ))
+            ) : (
+              <h5 className="mx-auto text-xl text-center">
+                No items added to the cart!
+              </h5>
+            )}
+            {/* // <div className="p-2 bg-grey-300">
+            //   <Image src={BurberryShine} width="82" height="82" />
+            // </div>
+            // <div className="flex flex-col gap-2">
+            //   <h3 className="text-lg font-medium">Burberry shine</h3>
+            //   <p className="uppercase text-grey-200">fendi</p>
+            // </div> */}
           </div>
 
-          <div className="flex flex-col gap-2 mt-4">
-            <div className="flex justify-between text-base">
-              <p className="text-grey-200">Subtotal</p>
-              <p>$150</p>
+          {cartItems.length > 0 && (
+            <div className="flex flex-col gap-2 mt-4">
+              <div className="flex justify-between text-base">
+                <p className="text-grey-200">Subtotal</p>
+                <p>$150</p>
+              </div>
+              <div className="flex justify-between text-base">
+                <p className="text-grey-200">Shipping</p>
+                <p>$10</p>
+              </div>
+              <div className="flex mb-4 border-b-[1px] pb-4 border-b-grey-200 justify-between text-base">
+                <p className="text-grey-200">Tax</p>
+                <p>$5</p>
+              </div>
+              <div className="flex justify-between">
+                <p className="text-light_black">Total</p> <p>$165</p>
+              </div>
+              <Button className="absolute z-50 top-[95%] lg:static lg:top-auto lg:left-auto left-1/2 -translate-x-1/2 lg:-translate-x-0 order-1 w-full md:w-[90%] py-3 mt-6 mx-auto text-background">
+                place order
+              </Button>
             </div>
-            <div className="flex justify-between text-base">
-              <p className="text-grey-200">Shipping</p>
-              <p>$10</p>
-            </div>
-            <div className="flex mb-4 border-b-[1px] pb-4 border-b-grey-200 justify-between text-base">
-              <p className="text-grey-200">Tax</p>
-              <p>$5</p>
-            </div>
-            <div className="flex justify-between">
-              <p className="text-light_black">Total</p> <p>$165</p>
-            </div>
-            <Button className="absolute z-50 top-[95%] lg:static left-1/2 -translate-x-1/2 order-1 w-full md:w-[90%] py-3 mt-6 mx-auto text-background">
-              place order
-            </Button>
-          </div>
+          )}
         </div>
       </div>
       <div className="flex flex-col w-full lg:w-[60%] rounded-sm pb-32 md:px-6 md:py-6 bg-background">

@@ -20,6 +20,18 @@ const CartPage = () => {
     <section className="flex flex-col gap-8 pt-12 bg-grey-300 inverse-grey full-bleed-grey">
       <div className="flex flex-col gap-4 font-poppins md:flex-col lg:flex-row">
         {/* cart-items list */}
+        {cartItems.length < 1 && (
+          <div className="flex flex-col items-center justify-center gap-2 text-[1rem] px-16 bg-background">
+            <h2 className="text-lg font-medium"> your shopping bug is empty</h2>
+            <Link
+              title="go back to shopping"
+              href="/"
+              className="items-center self-center inline-block px-3 pb-1 [letter-spacing:3px] capitalize border-b-2 border-b-grey-200 bg-primary-black text-primary-white"
+            >
+              go back to shopping
+            </Link>
+          </div>
+        )}
         {cartItems.map(
           ({ imageUrl, name, brand, category, price, rating, type }) => (
             <div className="basis-[60%] flex flex-col sm:flex-row justify-between gap-8 rounded-xl p-6 bg-background border-grey-200 border">
