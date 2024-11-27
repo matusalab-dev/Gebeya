@@ -43,7 +43,7 @@ const CheckoutPage = () => {
               placeholder="23rd, Boulevard Ave"
             />
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-col gap-3 md:flex-row">
             <div className="flex flex-col gap-3">
               <label htmlFor="name" className="font-medium capitalize">
                 city

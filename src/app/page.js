@@ -18,7 +18,7 @@ export default function Home() {
         <ImageWithText />
         <BrowseByCategory />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
