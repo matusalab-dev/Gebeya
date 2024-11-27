@@ -7,7 +7,7 @@ import Button from "../../components/Button";
 
 const CheckoutPage = () => {
   return (
-    <section className="flex flex-col gap-8 py-12 bg-grey-300 inverse-grey full-bleed-grey">
+    <section className="relative flex flex-col gap-8 py-12 bg-grey-300 inverse-grey full-bleed-grey">
       <div className="flex flex-col gap-14 md:gap-4 font-poppins md:flex-col lg:flex-row">
         <div className="basis-[60%] flex flex-col justify-between gap-8 rounded-sm p-6 bg-background border-grey-200 border">
           <h2 className="text-xl font-semibold">Shipping Address</h2>
@@ -117,13 +117,13 @@ const CheckoutPage = () => {
             <div className="flex justify-between">
               <p className="text-light_black">Total</p> <p>$165</p>
             </div>
-            <Button className="order-1 w-full md:w-[90%] py-3 mt-6 mx-auto text-background">
+            <Button className="absolute z-50 top-[95%] lg:static left-1/2 -translate-x-1/2 order-1 w-full md:w-[90%] py-3 mt-6 mx-auto text-background">
               place order
             </Button>
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full lg:w-[60%] rounded-sm px-6 py-6 bg-background">
+      <div className="flex flex-col w-full lg:w-[60%] rounded-sm pb-32 md:px-6 md:py-6 bg-background">
         <h4 className="text-2xl font-semibold capitalize">Payment Method</h4>
         <div className="flex-1 space-y-6">
           <div className="flex justify-between gap-1 mt-4 overflow-x-scroll lg:gap-3">
@@ -148,6 +148,7 @@ const CheckoutPage = () => {
               id="name"
               type="text"
               name="name"
+              required={true}
               className="py-4 px-2 w-full font-medium text-base border border-grey-200 rounded-sm  text-light_black/70 focus:!border-grey-500 focus:outline-none focus-within:outline-grey-500"
               placeholder="First & Last Name"
             />

@@ -51,7 +51,7 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center justify-between gap-1 py-6 text-sm sm:gap-11">
+    <nav className="flex items-center justify-between gap-1 py-6 text-sm md:gap-4">
       <div className="flex gap-4 sm:gap-6">
         <button
           onClick={() => setToggle(!toggle)}
