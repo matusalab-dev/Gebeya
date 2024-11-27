@@ -49,8 +49,11 @@ const CartPage = () => {
           </div>
         )}
         {cartItems.map(
-          ({ imageUrl, name, brand, category, price, rating, type }) => (
-            <div className="basis-[60%] flex flex-col sm:flex-row justify-between gap-8 rounded-xl p-6 bg-background border-grey-200 border">
+          ({ imageUrl, name, brand, category, price, rating, type }, index) => (
+            <div
+              key={index}
+              className="basis-[60%] flex flex-col sm:flex-row justify-between gap-8 rounded-xl p-6 bg-background border-grey-200 border"
+            >
               {/* product-images */}
               <div className="flex flex-col basis-[43%] gap-2">
                 <div className="px-6 bg-grey-300">
