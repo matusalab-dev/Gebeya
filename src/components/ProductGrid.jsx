@@ -16,19 +16,9 @@ export const PRODUCTS_INFO = [
     type: "bags",
     inStock: true,
   },
+
   {
-    name: "french kiss bag",
-    imageUrl: FrenchKissBag,
-    category: "women",
-    products: [],
-    brand: "aldo",
-    price: "500",
-    rating: "2k+",
-    type: "bags",
-    inStock: true,
-  },
-  {
-    name: "french kiss bag",
+    name: "Butline",
     imageUrl: FrenchKissBag,
     category: "women",
     products: [],

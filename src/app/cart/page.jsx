@@ -15,139 +15,147 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 const CartPage = () => {
-  const { handleInc, handleDec, qty } = useContext(CartContext);
+  const { handleInc, handleDec, qty, cartItems } = useContext(CartContext);
   return (
     <section className="flex flex-col gap-8 pt-12 bg-grey-300 inverse-grey full-bleed-grey">
       <div className="flex flex-col gap-4 font-poppins md:flex-col lg:flex-row">
-        <div className="basis-[60%] flex flex-col sm:flex-row justify-between gap-8 rounded-xl p-6 bg-background border-grey-200 border">
-          {/* product-images */}
-          <div className="flex flex-col basis-[43%] gap-2">
-            <div className="px-6 bg-grey-300">
-              <Image
-                src={BurberryShine}
-                width="201"
-                height="201"
-                className="sm:w-[261px] sm:h-[261px] mx-auto"
-              />
-            </div>
-            <div className="flex justify-between flex-1 gap-2">
-              <div className="bg-grey-300 w-14 h-14">
-                <Image src={BurberryShine} width="56" height="56" />
-              </div>
-              <div className="bg-grey-300 w-14 h-14">
-                <Image src={BurberryShine} width="56" height="56" />
-              </div>
-              <div className="bg-grey-300 w-14 h-14">
-                <Image src={BurberryShine} width="56" height="56" />
-              </div>
-              <div className="bg-grey-300 w-14 h-14">
-                <Image
-                  src={BurberryShine}
-                  width="56"
-                  height="56"
-                  className="w-full h-full"
-                />
-              </div>
-            </div>
-          </div>
-          {/* product-description */}
-          <div className="flex flex-col justify-start flex-1 gap-4">
-            <div className="flex items-start justify-between ">
-              <div className="border-b-[1.95px] pb-3 border-b-grey-200">
-                <h2 className="mb-2 text-3xl font-semibold">Burberry shine</h2>
-                <h3>
-                  brand: <span className="font-medium uppercase">fendi</span>
-                </h3>
-              </div>
-              <div className="p-2 rounded-full size-10 bg-orange">
-                <HeartOutline strokeColor="white" />
-              </div>
-            </div>
-            <div className="border-b-[1.95px] border-grey-200 flex flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <h4 className="text-lg font-medium">$150</h4>
-                <h5 className="line-through text-grey-200">$300</h5>
-                <p className="rounded-[4px] px-[2px] text-green bg-green/10">
-                  -50%
-                </p>
-              </div>
-              <p className="text-green/50">50 units left</p>
-              <p className="text-grey-200">
-                + Shipping fee may vary on location
-              </p>
-              <p className="flex gap-2 pb-4 text-grey-200">
-                <Image src={StarIcon} width="17" height="17" />
-                1k+ rating
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <p>Quantity:</p>
-              <div className="flex items-center gap-3 border rounded-sm border-light_black">
-                <button
-                  onClick={() => handleDec()}
-                  className="self-center px-3 py-1 border-r rounded-tl-sm rounded-bl-sm text-background bg-orange"
-                >
-                  -
-                </button>
-                <p className="font-medium">{qty}</p>
-                <button
-                  onClick={() => handleInc()}
-                  className="self-center px-3 py-1 border-l rounded-tr-sm rounded-br-sm text-background border-l-light_black bg-orange"
-                >
-                  +
-                </button>
-              </div>
-            </div>
-            <div className="flex flex-col items-start justify-between gap-3 lg:items-center lg:flex-row">
-              <div className="flex items-center gap-2">
-                <div className="flex items-center gap-2">
-                  <p className="capitalize">size:</p>
-                  <div className="flex gap-2">
-                    <button className="px-2 py-[0.0125rem] rounded-sm border border-grey-300">
-                      20
-                    </button>
-                    <button className="px-2 py-1 border rounded-sm border-grey-300">
-                      25
-                    </button>
-                    <button className="px-2 py-1 border rounded-sm border-grey-300">
-                      32
-                    </button>
-                    <button className="px-2 py-1 border rounded-sm border-grey-300">
-                      37
-                    </button>
+        {/* cart-items list */}
+        {cartItems.map(
+          ({ imageUrl, name, brand, category, price, rating, type }) => (
+            <div className="basis-[60%] flex flex-col sm:flex-row justify-between gap-8 rounded-xl p-6 bg-background border-grey-200 border">
+              {/* product-images */}
+              <div className="flex flex-col basis-[43%] gap-2">
+                <div className="px-6 bg-grey-300">
+                  <Image
+                    src={imageUrl}
+                    width="201"
+                    height="201"
+                    className="sm:w-[261px] sm:h-[261px] mx-auto"
+                  />
+                </div>
+                <div className="flex justify-between flex-1 gap-2">
+                  <div className="bg-grey-300 w-14 h-14">
+                    <Image src={imageUrl} width="56" height="56" />
+                  </div>
+                  <div className="bg-grey-300 w-14 h-14">
+                    <Image src={imageUrl} width="56" height="56" />
+                  </div>
+                  <div className="bg-grey-300 w-14 h-14">
+                    <Image src={imageUrl} width="56" height="56" />
+                  </div>
+                  <div className="bg-grey-300 w-14 h-14">
+                    <Image
+                      src={imageUrl}
+                      width="56"
+                      height="56"
+                      className="w-full h-full"
+                    />
                   </div>
                 </div>
               </div>
-              <p className="text-sm font-medium">see all size guides</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <p className="capitalize">color:</p>
-              <div className="flex gap-1">
-                <button className="p-[1px] border-[0.025px] border-grey-200 ">
-                  <span className="block bg-orange size-4"></span>
-                </button>
-                <button className="p-1 bg-purple size-4"></button>
-                <button className="p-1 bg-red size-4"></button>
-                <button className="p-1 bg-light_black size-4"></button>
+              {/* product-description */}
+              <div className="flex flex-col justify-start flex-1 gap-4">
+                <div className="flex items-start justify-between ">
+                  <div className="border-b-[1.95px] pb-3 border-b-grey-200">
+                    <h2 className="mb-2 text-3xl font-semibold">{name}</h2>
+                    <h3>
+                      brand:{" "}
+                      <span className="font-medium uppercase">{brand}</span>
+                    </h3>
+                  </div>
+                  <div className="p-2 rounded-full size-10 bg-orange">
+                    <HeartOutline strokeColor="white" />
+                  </div>
+                </div>
+                <div className="border-b-[1.95px] border-grey-200 flex flex-col gap-2">
+                  <div className="flex items-center gap-2">
+                    <h4 className="text-lg font-medium">${price}</h4>
+                    <h5 className="line-through text-grey-200">$300</h5>
+                    <p className="rounded-[4px] px-[2px] text-green bg-green/10">
+                      -50%
+                    </p>
+                  </div>
+                  <p className="text-green/50">50 units left</p>
+                  <p className="text-grey-200">
+                    + Shipping fee may vary on location
+                  </p>
+                  <p className="flex gap-2 pb-4 text-grey-200">
+                    <Image src={StarIcon} width="17" height="17" />
+                    {rating} rating
+                  </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <p>Quantity:</p>
+                  <div className="flex items-center gap-3 border rounded-sm border-light_black">
+                    <button
+                      onClick={() => handleDec()}
+                      className="self-center px-3 py-1 border-r rounded-tl-sm rounded-bl-sm text-background bg-orange"
+                    >
+                      -
+                    </button>
+                    <p className="font-medium">{qty}</p>
+                    <button
+                      onClick={() => handleInc()}
+                      className="self-center px-3 py-1 border-l rounded-tr-sm rounded-br-sm text-background border-l-light_black bg-orange"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start justify-between gap-3 lg:items-center lg:flex-row">
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2">
+                      <p className="capitalize">size:</p>
+                      <div className="flex gap-2">
+                        <button className="px-2 py-[0.0125rem] rounded-sm border border-grey-300">
+                          20
+                        </button>
+                        <button className="px-2 py-1 border rounded-sm border-grey-300">
+                          25
+                        </button>
+                        <button className="px-2 py-1 border rounded-sm border-grey-300">
+                          32
+                        </button>
+                        <button className="px-2 py-1 border rounded-sm border-grey-300">
+                          37
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-sm font-medium">see all size guides</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <p className="capitalize">color:</p>
+                  <div className="flex gap-1">
+                    <button className="p-[1px] border-[0.025px] border-grey-200 ">
+                      <span className="block bg-orange size-4 border-[0.025px] border-grey-200"></span>
+                    </button>
+                    <button className="p-1 bg-purple size-4 border-[0.025px] border-grey-200"></button>
+                    <button className="p-1 bg-red size-4 border-[0.025px] border-grey-200"></button>
+                    <button className="p-1 bg-light_black size-4 border-[0.025px] border-grey-200"></button>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-between gap-2 mt-8 text-base font-medium lg:mt-4 md:flex-col lg:flex-row md:gap-2">
+                  <button className="flex items-center justify-center gap-2 py-1 pl-2 pr-4 font-semibold border rounded-lg border-grey-200">
+                    <CartIcon strokeColor="white" background="black" />
+                    Save for later
+                  </button>
+                  <Link
+                    href="/checkout"
+                    className="inline-block px-16 py-3 font-semibold text-center md:py-3 text-background rounded-xl bg-orange"
+                  >
+                    Buy now
+                  </Link>
+                </div>
+                <p className="mx-auto text-center text-green">
+                  Pickup & Pay on collection available
+                </p>
               </div>
             </div>
-            <div className="flex flex-col justify-between gap-2 mt-8 text-base font-medium lg:mt-4 md:flex-col lg:flex-row md:gap-2">
-              <button className="flex items-center justify-center gap-2 py-1 pl-2 pr-4 font-semibold border rounded-lg border-grey-200">
-                <CartIcon strokeColor="white" background="black" />
-                Save for later
-              </button>
-              <Link
-                href="/checkout"
-                className="inline-block px-16 py-3 font-semibold text-center md:py-3 text-background rounded-xl bg-orange"
-              >
-                Buy now
-              </Link>
-            </div>
-            <p className="mx-auto text-center text-green">
-              Pickup & Pay on collection available
-            </p>
-          </div>
-        </div>
+          )
+        )}
+
+        {/* delivery & return policy */}
         <div className="flex-1 p-6 bg-background rounded-xl">
           <h3 className="pb-3 mb-6 text-2xl font-semibold border-b border-grey-200">
             Delivery & Return

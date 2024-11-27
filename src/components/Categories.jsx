@@ -52,7 +52,7 @@ const Categories = () => {
         } grid grid-cols-2 gap-4 place-content-center md:grid-cols-3 lg:grid-cols-6  lg:gap-6 md:gap-3`}
       >
         {productDoesNotExist ? (
-          <div className="w-64 col-span-1 col-start-2 mx-auto text-center text-light_black">
+          <div className="w-64 col-start-1 mx-auto text-center col-span-full lg:col-span-1 lg:col-start-2 text-light_black">
             <p className="text-xl font-alfa">oops!</p>
             <p>No Products listed on this category</p>
           </div>
