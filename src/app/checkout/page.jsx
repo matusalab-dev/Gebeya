@@ -1,3 +1,6 @@
+import Image from "next/image";
+import BurberryShine from "../../../assets/img/Burberry_Shine.png";
+
 const CheckoutPage = () => {
   return (
     <section className="flex flex-col gap-8 pt-12 bg-grey-300 inverse-grey full-bleed-grey">
@@ -81,7 +84,33 @@ const CheckoutPage = () => {
         </div>
 
         <div className="flex-1 p-6 rounded-sm bg-background">
-          <h6 className="text-xl font-semibold capitalize">order summary</h6>
+          <h6 className="text-xl font-semibold text-center capitalize border-b-[1px] pb-4 border-grey-200">
+            order summary
+          </h6>
+          <div className="flex gap-3 mt-6">
+            <div className="p-2 bg-grey-300">
+              <Image src={BurberryShine} width="82" height="82" />
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="text-lg font-medium">Burberry shine</h3>
+              <p className="uppercase text-grey-200">fendi</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-between text-base">
+              <p className="text-grey-200">Subtotal</p>
+              <p>$150</p>
+            </div>
+            <div className="flex justify-between text-base">
+              <p className="text-grey-200">Shipping</p>
+              <p>$10</p>
+            </div>
+            <div className="flex mb-4 border-b-[1px] border-b-grey-00 justify-between text-base">
+              <p className="text-grey-200">Tax</p>
+              <p>$5</p>
+            </div>
+          </div>
         </div>
       </div>{" "}
     </section>
