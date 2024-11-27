@@ -8,6 +8,7 @@ import BankTransferIcon from "../../../assets/icons/bank.png";
 import Button from "../../components/Button";
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
+import ArrowIcon from "../../../assets/icons/arrow-icon";
 
 const CheckoutPage = () => {
   const { cartItems } = useContext(CartContext);
@@ -70,13 +71,19 @@ const CheckoutPage = () => {
               <label htmlFor="name" className="font-medium capitalize">
                 State
               </label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                className="py-4 px-2 w-full font-medium text-base border border-grey-200 rounded-sm  text-light_black/70 focus:!border-grey-500 focus:outline-none focus-within:outline-grey-500"
-                placeholder="Select State"
-              />
+              <div className="flex items-center">
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  className="py-4 px-2 w-full font-medium text-base border border-grey-200 rounded-sm  text-light_black/70 focus:!border-grey-500 focus:outline-none focus-within:outline-grey-500"
+                  placeholder="Select State"
+                />
+                <ArrowIcon
+                  strokeColor="#808080"
+                  className="-translate-x-10 size-8"
+                />
+              </div>
             </div>
             <div className="flex flex-col gap-3">
               <label htmlFor="name" className="font-medium capitalize">
@@ -197,36 +204,51 @@ const CheckoutPage = () => {
                 Expiry
               </label>
               <div className="flex gap-2">
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  className="py-4 px-2 w-full font-medium text-base border border-grey-200 rounded-sm  text-light_black/70 focus:!border-grey-500 focus:outline-none focus-within:outline-grey-500"
-                  placeholder="MM"
-                />
-                {/* <label htmlFor="name" className="font-medium capitalize">
-                  State
-                  </label> */}
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  className="md:self-end py-4 px-2 w-full font-medium text-base border border-grey-200 rounded-sm  text-light_black/70 focus:!border-grey-500 focus:outline-none focus-within:outline-grey-500"
-                  placeholder="YYYY"
-                />
+                <div className="flex items-center">
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    className="py-4 px-2 w-full font-medium text-base border border-grey-200 rounded-sm  text-light_black/70 focus:!border-grey-500 focus:outline-none focus-within:outline-grey-500"
+                    placeholder="MM"
+                  />
+                  <ArrowIcon
+                    strokeColor="#808080"
+                    className="-translate-x-10 size-8"
+                  />
+                </div>
+                <div className="flex items-center">
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    className="md:self-end py-4 px-2 w-full font-medium text-base border border-grey-200 rounded-sm  text-light_black/70 focus:!border-grey-500 focus:outline-none focus-within:outline-grey-500"
+                    placeholder="YYYY"
+                  />
+                  <ArrowIcon
+                    strokeColor="#808080"
+                    className="-translate-x-10 size-8"
+                  />
+                </div>
               </div>
             </div>
             <div className="flex flex-col gap-3">
               <label htmlFor="name" className="font-medium capitalize">
                 CVV
               </label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                className="py-4 px-2 w-full font-medium text-base border border-grey-200 rounded-sm  text-light_black/70 focus:!border-grey-500 focus:outline-none focus-within:outline-grey-500"
-                placeholder="CVV"
-              />
+              <div className="flex items-center">
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  className="py-4 px-2 w-full font-medium text-base border border-grey-200 rounded-sm  text-light_black/70 focus:!border-grey-500 focus:outline-none focus-within:outline-grey-500"
+                  placeholder="CVV"
+                />
+                <ArrowIcon
+                  strokeColor="#808080"
+                  className="-translate-x-10 size-8"
+                />
+              </div>
             </div>
           </div>
         </div>

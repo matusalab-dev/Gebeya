@@ -21,7 +21,7 @@ import ArrowIcon from "../../../assets/icons/arrow-icon";
 const CartPage = () => {
   const { handleInc, handleDec, qty, cartItems } = useContext(CartContext);
   return (
-    <section className="flex flex-col gap-8 pt-12 bg-grey-300 inverse-grey full-bleed-grey">
+    <section className="flex flex-col gap-8 pt-12 md:bg-grey-300 inverse-grey full-bleed-grey">
       <div className="flex items-center gap-3">
         <Link href="/">Home</Link>{" "}
         <ArrowIcon
@@ -102,7 +102,9 @@ const CartPage = () => {
               <div className="flex flex-col justify-start flex-1 gap-4">
                 <div className="flex items-start justify-between ">
                   <div className="border-b-[1.95px] pb-3 border-b-grey-200">
-                    <h2 className="mb-2 text-3xl font-semibold">{name}</h2>
+                    <h2 className="mb-2 text-3xl font-semibold capitalize">
+                      {name}
+                    </h2>
                     <h3>
                       brand:{" "}
                       <span className="font-medium uppercase">{brand}</span>
@@ -134,7 +136,7 @@ const CartPage = () => {
                   <div className="flex items-center gap-3 border rounded-sm border-light_black">
                     <button
                       onClick={() => handleDec()}
-                      className="self-center px-3 py-1 border-r rounded-tl-sm rounded-bl-sm text-background bg-orange"
+                      className="self-center px-3 py-1 border-r rounded-tl-sm rounded-bl-sm border-r-light_black text-background bg-orange"
                     >
                       -
                     </button>
@@ -201,18 +203,30 @@ const CartPage = () => {
         )}
 
         {/* delivery & return policy */}
-        <div className="flex-1 p-6 bg-background rounded-xl">
+        <div className="flex-1 p-6 border bg-background rounded-xl border-grey-200">
           <h3 className="pb-3 mb-6 text-2xl font-semibold border-b border-grey-200">
             Delivery & Return
           </h3>
           <p className="font-medium capitalize">Location</p>
-          <div className="flex flex-col gap-3 mt-2">
-            <p className="px-2 py-3 capitalize border rounded-sm border-grey-200">
-              location
-            </p>
-            <p className="px-2 py-3 capitalize border rounded-sm border-grey-200">
-              Sub-location
-            </p>
+          <div className="flex flex-col gap-3 mt-2 basis-full">
+            <div className="flex items-center justify-between w-full">
+              <p className="px-2 py-3 capitalize border rounded-sm basis-full justify-self-stretch border-grey-200">
+                location
+              </p>
+              <ArrowIcon
+                strokeColor="#808080"
+                className="-translate-x-10 size-8"
+              />
+            </div>
+            <div className="flex items-center justify-stretch">
+              <p className="px-2 py-3 capitalize border rounded-sm basis-full border-grey-200">
+                Sub-location
+              </p>
+              <ArrowIcon
+                strokeColor="#808080"
+                className="-translate-x-10 size-8"
+              />
+            </div>
           </div>
           <div className="grid justify-start gap-3 mt-8 grid-col-2">
             {/* <div className="flex items-center gap-4 text-xl font-medium"> */}
@@ -253,22 +267,26 @@ const CartPage = () => {
 
       {/* product-details tab */}
       <div className="px-6 py-8 rounded-xl bg-background">
-        <div className="border-b-2 pb-7 border-grey-200">
-          <div className="flex gap-6 overflow-x-scroll">
-            <button className="bg-orange text-background px-[24.5px] py-2 md:px-[56px] md:py-4 text-base font-medium md:font-normal md:text-2xl  rounded-3xl border border-grey-200 capitalize">
-              Overview
+        <div className="md:border-b-2 pb-7 md:border-grey-200">
+          <div className="flex flex-col gap-0 space-y-4 overflow-x-scroll md:space-y-0 md:gap-6 md:flex-row md:divide-x-0">
+            <button className="border-b-2 border-b-grey-200 pb-4 justify-self-center flex justify-between md:bg-orange text-light_black md:text-background px-[24.5px] py-2 md:px-[56px] md:py-4 text-base font-medium md:font-normal md:text-2xl  md:rounded-3xl md:border md:border-grey-200 capitalize">
+              Overview{" "}
+              <ArrowIcon strokeColor="#1e1e1e" className="block md:hidden" />
             </button>
-            <button className=" text-light_black px-[24.5px] py-2 md:px-[56px] md:py-4 text-base font-medium md:font-normal md:text-2xl  rounded-3xl border border-grey-200 capitalize">
+            <button className="border-b-2 border-b-grey-200 pb-4 flex justify-between items-center text-light_black px-[24.5px] py-2 md:px-[56px] md:py-4 text-base font-medium md:font-normal md:text-2xl  md:rounded-3xl md:border md:border-grey-200 capitalize">
               description
+              <ArrowIcon strokeColor="#1e1e1e" className="block md:hidden" />
             </button>
-            <button className=" text-light_black px-[24.5px] py-2 md:px-[56px] md:py-4 text-base font-medium md:font-normal md:text-2xl  rounded-3xl border border-grey-200 capitalize">
+            <button className="border-b-2 border-b-grey-200 pb-4 flex justify-between items-center text-light_black px-[24.5px] py-2 md:px-[56px] md:py-4 text-base font-medium md:font-normal md:text-2xl  md:rounded-3xl md:border md:border-grey-200 capitalize">
               warranty
+              <ArrowIcon strokeColor="#1e1e1e" className="block md:hidden" />
             </button>
-            <button className=" text-light_black px-[24.5px] py-2 md:px-[56px] md:py-4 text-base font-medium md:font-normal md:text-2xl  rounded-3xl border border-grey-200 capitalize">
+            <button className="border-b-2 border-b-grey-200 pb-4 flex justify-between items-center text-light_black px-[24.5px] py-2 md:px-[56px] md:py-4 text-base font-medium md:font-normal md:text-2xl  md:rounded-3xl md:border md:border-grey-200 capitalize">
               reviews
+              <ArrowIcon strokeColor="#1e1e1e" className="block md:hidden" />
             </button>
           </div>
-          <ul className="flex flex-col gap-2 mt-6 text-sm text-grey-500">
+          <ul className="flex-col hidden gap-2 mt-6 text-sm md:flex text-grey-500">
             <div className="flex items-center gap-2">
               <span className="rounded-full bg-grey-500 size-1"></span>
               <li>
