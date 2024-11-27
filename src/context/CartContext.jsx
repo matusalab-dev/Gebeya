@@ -14,6 +14,8 @@ export default function CartProvider({ children }) {
   const [totalQty, setTotalQty] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
+  console.log("cart-items", cartItems);
+
   /* a function get called after clicking `addtocart` button which accept two arguments,
      the product instance we want to add to the cart `productToAdd` and the quantity of the product `quantity`*/
   function handleAddToCart(productToAdd, quantity) {

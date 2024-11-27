@@ -1,6 +1,6 @@
 import { cn } from "../lib/utils";
 
-const Button = ({ className }) => {
+const Button = ({ className, children = "Explore Now" }) => {
   return (
     <button
       className={`${cn(
@@ -8,7 +8,7 @@ const Button = ({ className }) => {
         className
       )}`}
     >
-      Explore Now
+      {children}
     </button>
   );
 };

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BurberryShine from "../../../assets/img/Burberry_Shine.png";
+import Button from "../../components/Button";
 
 const CheckoutPage = () => {
   return (
@@ -97,7 +98,7 @@ const CheckoutPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 mt-4">
             <div className="flex justify-between text-base">
               <p className="text-grey-200">Subtotal</p>
               <p>$150</p>
@@ -106,10 +107,17 @@ const CheckoutPage = () => {
               <p className="text-grey-200">Shipping</p>
               <p>$10</p>
             </div>
-            <div className="flex mb-4 border-b-[1px] border-b-grey-00 justify-between text-base">
+            <div className="flex mb-4 border-b-[1px] pb-4 border-b-grey-200 justify-between text-base">
               <p className="text-grey-200">Tax</p>
               <p>$5</p>
             </div>
+            <div className="flex justify-between">
+              <p className="text-light_black">Total</p> <p>$165</p>
+            </div>
+            <Button
+              children="place order"
+              className="w-[90%] py-3 mt-6 mx-auto text-background"
+            />
           </div>
         </div>
       </div>{" "}

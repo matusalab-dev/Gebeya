@@ -7,15 +7,8 @@ import Link from "next/link";
 import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
 
-const ProductCard = ({
-  name,
-  imageUrl,
-  category,
-  brand,
-  price,
-  rating,
-  inStock,
-}) => {
+const ProductCard = (product) => {
+  const { name, imageUrl, category, brand, price, rating, inStock } = product;
   const { handleAddToCart, qty } = useContext(CartContext);
   return (
     <div className="py-4">
@@ -54,7 +47,7 @@ const ProductCard = ({
           </div>
           <Link
             href="/cart"
-            onClick={() => handleAddToCart(currentProduct, qty)}
+            onClick={() => handleAddToCart(selectedProduct, qty)}
             className="self-end text-sm md:text-xl font-medium rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background"
           >
             Add to cart
