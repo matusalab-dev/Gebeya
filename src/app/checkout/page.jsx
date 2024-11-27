@@ -123,19 +123,19 @@ const CheckoutPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-[60%] rounded-sm px-6 py-6 bg-background">
+      <div className="flex flex-col w-full lg:w-[60%] rounded-sm px-6 py-6 bg-background">
         <h4 className="text-2xl font-semibold capitalize">Payment Method</h4>
-        <div className="space-y-6">
-          <div className="flex justify-between gap-3 mt-4">
-            <div className="flex flex-col gap-4 px-24 py-4 border rounded-sm bg-orange text-background border-light_black">
+        <div className="flex-1 space-y-6">
+          <div className="flex justify-between gap-1 mt-4 overflow-x-scroll lg:gap-3">
+            <div className="flex flex-col justify-center gap-4 px-12 py-2 border rounded-sm lg:justify-normal lg:px-24 lg:py-4 bg-orange text-background border-light_black">
               <Image src={CardIcon} width="32" height="32" />
               <p>card</p>
             </div>
-            <div className="flex flex-col gap-4 px-24 py-4 border rounded-sm border-grey-200">
+            <div className="flex flex-col gap-4 px-12 py-2 border rounded-sm lg:px-24 lg:py-4 border-grey-200">
               <Image src={WalletIcon} width="32" height="32" />
               <p>wallet</p>
             </div>
-            <div className="flex flex-col items-center gap-4 px-16 py-4 border rounded-sm border-grey-200">
+            <div className="flex flex-col items-center gap-4 px-12 py-2 border rounded-sm lg:px-16 lg:py-4 border-grey-200">
               <Image src={BankTransferIcon} width="32" height="32" />
               <p>bank transfer</p>
             </div>
