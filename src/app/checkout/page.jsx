@@ -9,12 +9,13 @@ import Button from "../../components/Button";
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 import ArrowIcon from "../../../assets/icons/arrow-icon";
+import Link from "next/link";
 
 const CheckoutPage = () => {
   const { cartItems } = useContext(CartContext);
 
   return (
-    <section className="relative flex flex-col gap-8 py-12 bg-grey-300 inverse-grey full-bleed-grey">
+    <section className="relative flex flex-col gap-8 py-12 pb-32 bg-grey-300 inverse-grey full-bleed-grey">
       <div className="flex flex-col gap-14 md:gap-4 font-poppins md:flex-col lg:flex-row">
         <div className="basis-[60%] flex flex-col justify-between gap-8 rounded-sm p-6 bg-background border-grey-200 border">
           <h2 className="text-xl font-semibold">Shipping Address</h2>
@@ -113,7 +114,9 @@ const CheckoutPage = () => {
                     <Image src={cartItem.imageUrl} width="72" height="72" />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-lg font-medium">{cartItem.name}</h3>
+                    <h3 className="text-lg font-medium capitalize">
+                      {cartItem.name}
+                    </h3>
                     <p className="uppercase text-grey-200">{cartItem.brand}</p>
                   </div>
                 </>
@@ -149,9 +152,12 @@ const CheckoutPage = () => {
               <div className="flex justify-between">
                 <p className="text-light_black">Total</p> <p>$165</p>
               </div>
-              <Button className="absolute z-50 top-[95%] lg:static lg:top-auto lg:left-auto left-1/2 -translate-x-1/2 lg:-translate-x-0 order-1 w-full md:w-[90%] py-3 mt-6 mx-auto text-background">
+              <Link
+                href="/"
+                className="absolute z-50 top-[95%] lg:static lg:top-auto lg:left-auto left-1/2 -translate-x-1/2 lg:-translate-x-0 order-1 w-full md:w-[90%] py-3 mt-6 mx-auto bg-orange text-center text-2xl rounded-sm text-background"
+              >
                 place order
-              </Button>
+              </Link>
             </div>
           )}
         </div>

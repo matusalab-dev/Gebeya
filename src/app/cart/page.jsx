@@ -188,14 +188,14 @@ const CartPage = () => {
                     </button>
                   </div>
                 </div>
-                <div className="flex flex-col justify-between gap-2 mt-8 text-base font-medium lg:mt-4 md:flex-col lg:flex-row md:gap-2">
-                  <button className="flex items-center justify-center gap-2 py-1 pl-2 pr-4 font-semibold border rounded-lg border-grey-200">
+                <div className="flex flex-col justify-between gap-2 mt-8 text-base font-medium lg:mt-4 md:flex-col lg:flex-row md:gap-1">
+                  <button className="flex items-center self-stretch justify-center gap-2 py-1 pl-2 pr-4 font-semibold border rounded-sm border-grey-200">
                     <CartIcon strokeColor="white" background="black" />
                     Save for later
                   </button>
                   <Link
                     href="/checkout"
-                    className="inline-block px-16 py-3 font-semibold text-center md:py-3 text-background rounded-xl bg-orange"
+                    className="self-stretch inline-block px-16 py-3 font-semibold text-center rounded-sm md:px-14 md:py-3 text-background bg-orange"
                   >
                     Buy now
                   </Link>
