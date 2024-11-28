@@ -37,7 +37,7 @@ const CartPage = () => {
       <div className="flex flex-col gap-4 font-poppins md:flex-col lg:flex-row">
         {/* cart-items list */}
         {cartItems.length < 1 && (
-          <div className="flex flex-col items-center justify-center gap-2 text-[1rem] px-16 py-12 bg-background">
+          <div className="flex flex-col rounded-xl  border-grey-200 border items-center justify-center gap-2 text-[1rem] px-16 py-12 bg-background">
             <h2 className="text-lg font-medium"> your shopping bug is empty</h2>
             <Link
               title="go back to shopping"
