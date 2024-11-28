@@ -162,7 +162,7 @@ const CheckoutPage = () => {
           )}
         </div>
       </div>
-      <div className="flex flex-col w-full lg:w-[60%] rounded-sm pb-32 md:px-6 md:py-6 bg-background">
+      <div className="flex flex-col w-full lg:w-[60%] rounded-sm pb-32 p-6 md:px-6 md:py-6 bg-background">
         <h4 className="text-2xl font-semibold capitalize">Payment Method</h4>
         <div className="flex-1 space-y-6">
           <div className="flex justify-between gap-1 mt-4 overflow-x-scroll lg:gap-3">
