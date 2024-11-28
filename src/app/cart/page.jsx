@@ -66,13 +66,28 @@ const CartPage = () => {
                 </div>
                 <div className="flex items-start justify-between gap-2">
                   <div className="bg-grey-300 w-14 h-14">
-                    <Image src={imageUrl} width="56" height="56" />
+                    <Image
+                      src={imageUrl}
+                      width="56"
+                      height="56"
+                      className="w-full h-full"
+                    />
                   </div>
                   <div className="bg-grey-300 w-14 h-14">
-                    <Image src={imageUrl} width="56" height="56" />
+                    <Image
+                      src={imageUrl}
+                      width="56"
+                      height="56"
+                      className="w-full h-full"
+                    />
                   </div>
                   <div className="bg-grey-300 w-14 h-14">
-                    <Image src={imageUrl} width="56" height="56" />
+                    <Image
+                      src={imageUrl}
+                      width="56"
+                      height="56"
+                      className="w-full h-full"
+                    />
                   </div>
                   <div className="bg-grey-300 w-14 h-14">
                     <Image

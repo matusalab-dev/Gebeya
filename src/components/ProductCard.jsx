@@ -15,7 +15,7 @@ const ProductCard = (product) => {
       <div className="flex flex-col gap-4 p-4 space-y-6 border border-grey-100 rounded-xl">
         <div className="h-[196px] w-[327px] rounded-lg  sm:h-[258px] sm:w-[403px] flex justify-between items-start p-2 md:p-4 bg-grey-300">
           <div className="p-2 rounded-full bg-background">
-            <HeartOutline />
+            <HeartOutline className="cursor-pointer" />
           </div>
           <Image
             src={imageUrl}
@@ -49,7 +49,7 @@ const ProductCard = (product) => {
             onClick={() => handleAddToCart(product, qty)}
             className="self-end rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background"
           >
-            <Link href="/cart" className="text-sm font-medium  md:text-xl">
+            <Link href="/cart" className="text-sm font-medium md:text-xl">
               Add to cart
             </Link>
           </button>
