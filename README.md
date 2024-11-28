@@ -17,3 +17,4 @@ Gebeya shop is a user-friendly ecommerce platform, with a curated collections, a
 - filter items on home page based their categories
 - mobile menu list
 - place your order, redirect to homepage
+- basic seo best practices like favicon, title, description
