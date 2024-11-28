@@ -1,3 +1,3 @@
 # Gebeya
 
-Gebeya is our user-friendly ecommerce platform, with our curated collections, and exceptional customer service
+Gebeya shop is a user-friendly ecommerce platform, with a curated collections, and exceptional customer service.

@@ -132,7 +132,7 @@ const CartPage = () => {
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <p>Quantity:</p>
+                  <p className="text-base">Quantity:</p>
                   <div className="flex items-center gap-3 border rounded-sm border-light_black">
                     <button
                       onClick={() => handleDec()}
@@ -152,18 +152,18 @@ const CartPage = () => {
                 <div className="flex flex-col items-start justify-between gap-3 lg:items-center lg:flex-row">
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-2">
-                      <p className="capitalize">size:</p>
+                      <p className="text-base capitalize">size:</p>
                       <div className="flex gap-2">
-                        <button className="px-2 py-[0.0125rem] rounded-sm border border-grey-300">
+                        <button className="px-2 py-[0.0125rem] rounded-sm border border-grey-200">
                           20
                         </button>
-                        <button className="px-2 py-1 border rounded-sm border-grey-300">
+                        <button className="px-2 py-1 border rounded-sm border-grey-200">
                           25
                         </button>
-                        <button className="px-2 py-1 border rounded-sm border-grey-300">
+                        <button className="px-2 py-1 border rounded-sm border-grey-200">
                           32
                         </button>
-                        <button className="px-2 py-1 border rounded-sm border-grey-300">
+                        <button className="px-2 py-1 border rounded-sm border-grey-200">
                           37
                         </button>
                       </div>
@@ -172,7 +172,7 @@ const CartPage = () => {
                   <p className="text-sm font-medium">see all size guides</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <p className="capitalize">color:</p>
+                  <p className="text-base capitalize">color:</p>
                   <div className="flex gap-1">
                     <button className="p-[1px] border-[0.025px] rounded-[2px] border-light_black">
                       <span className="block bg-orange size-4"></span>
@@ -214,9 +214,9 @@ const CartPage = () => {
             Delivery & Return
           </h3>
           <p className="font-medium capitalize">Location</p>
-          <div className="flex flex-col gap-3 mt-2 basis-full">
-            <div className="flex items-center justify-between w-full">
-              <p className="px-2 py-3 capitalize border rounded-sm basis-full justify-self-stretch border-grey-200">
+          <div className="flex flex-col w-full gap-3 mt-2">
+            <div className="flex items-center">
+              <p className="px-2 py-3 capitalize border rounded-sm basis-full border-grey-200">
                 location
               </p>
               <ArrowIcon
