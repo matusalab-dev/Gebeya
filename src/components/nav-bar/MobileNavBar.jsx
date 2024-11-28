@@ -30,7 +30,7 @@ const MobileNavBar = ({ setToggle, toggle }) => {
           className="w-3/5 mx-auto "
           styleButton="border-b-2 border-t-2 border-grey-200 py-4"
         />
-        <p className="-mb-3">our categories</p>
+        <p className="-mb-1 capitalize">our categories</p>
         <NavLinks navLinks={NAV_LINKS} className="block" />
         <ButtonHoverOver label="More" links={SECONDARY_HOVEROVER_LINKS} />
       </div>

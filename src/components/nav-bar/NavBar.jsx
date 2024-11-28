@@ -33,13 +33,18 @@ export const NavLinks = ({
   href,
   className,
 }) => {
-  return navLinks.map(({ href, label }) => {
+  return navLinks.map(({ href, label, setToggle, toggle }) => {
     const defaultStyle = `hidden lg:block ${
       pathname === href ? "font-semibold" : ""
     } `;
 
     return (
-      <Link key={href} href={href} className={`${cn(defaultStyle, className)}`}>
+      <Link
+        key={href}
+        href={href}
+        onClick={() => setToggle(!toggle)}
+        className={`${cn(defaultStyle, className)}`}
+      >
         {label}
       </Link>
     );

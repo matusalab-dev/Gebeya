@@ -30,7 +30,7 @@ const Hero = () => {
           className="object-cover w-full h-full rounded-full"
         />
       </div>
-      <Button className="self-end row-span-1 px-24 py-3 row-start-8 col-span-full sm:justify-self-center md:justify-self-stretch lg:justify-self-start md:col-start-2 md:col-span-4 lg:col-start-4 md:w-max md:px-24 md:py-3 md:row-start-7 md:row-span-2" />
+      <Button className="self-end row-span-1 px-24 py-3 row-start-8 col-span-full sm:justify-self-center md:col-start-2 md:col-span-3 md:justify-self-stretch lg:justify-self-start md:col-span-4 lg:col-start-4 md:w-max md:px-24 md:py-3 md:row-start-7 md:row-span-2" />
       <div className="size-[185px] col-span-2 md:col-start-7 md:justify-self-end lg:row-start-8 lg:row-span-2 ml-0 hidden self-end lg:block ">
         <Image
           src={HeroImage3}
