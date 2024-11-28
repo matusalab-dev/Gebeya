@@ -240,7 +240,9 @@ const CartPage = () => {
           <div className="grid justify-start gap-3 mt-8 grid-col-2">
             {/* <div className="flex items-center gap-4 text-xl font-medium"> */}
             <DeliveryIcon className="col-start-1 col-[min-content]" />{" "}
-            <h5 className="col-span-1 col-start-2">Delivery </h5>
+            <h5 className="self-start col-span-1 col-start-2 text-lg font-medium">
+              Delivery{" "}
+            </h5>
             {/* </div>{" "} */}
             <ul className="flex flex-col col-start-2 row-start-2 gap-2 justify-self-start ">
               <li>Estimated delivery time is 1-12 business days</li>
@@ -261,7 +263,9 @@ const CartPage = () => {
           <div className="grid justify-start gap-3 mt-8 grid-col-2">
             {/* <div className="flex items-center gap-4 text-xl font-medium"> */}
             <ReturnIcon className="col-start-1 col-[min-content]" />{" "}
-            <h5 className="col-span-1 col-start-2">Return policy </h5>
+            <h5 className="self-start col-span-1 col-start-2 text-lg font-medium">
+              Return policy{" "}
+            </h5>
             {/* </div>{" "} */}
             <ul className="flex flex-col col-start-2 row-start-2 gap-2 justify-self-start ">
               <li>Guaranteed 7-day return policy</li>
