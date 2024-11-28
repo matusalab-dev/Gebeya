@@ -34,6 +34,12 @@ const BrowseByCategory = () => {
           );
         })}
       </div>
+      <div className="flex justify-center w-full gap-[1px] mx-auto mt-6 md:hidden">
+        <button className="w-3 h-2 rounded-md bg-light_black"></button>
+        <button className="w-3 h-2 rounded-md bg-grey-200"></button>
+        <button className="w-3 h-2 rounded-md bg-grey-200"></button>
+        <button className="w-3 h-2 rounded-md bg-grey-200"></button>
+      </div>
     </section>
   );
 };

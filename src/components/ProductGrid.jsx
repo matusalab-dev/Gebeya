@@ -91,11 +91,19 @@ export const PRODUCTS_INFO = [
 
 const ProductGrid = () => {
   return (
-    <div className="flex gap-4 overflow-x-scroll overscroll-x-contain">
-      {PRODUCTS_INFO.map((product, index) => (
-        <ProductCard key={index} {...product} />
-      ))}
-    </div>
+    <>
+      <div className="flex gap-4 overflow-x-scroll">
+        {PRODUCTS_INFO.map((product, index) => (
+          <ProductCard key={index} {...product} />
+        ))}
+      </div>
+      <div className="flex justify-center w-full gap-[1px] mx-auto mt-6 md:hidden">
+        <button className="w-3 h-2 rounded-md bg-light_black"></button>
+        <button className="w-3 h-2 rounded-md bg-grey-200"></button>
+        <button className="w-3 h-2 rounded-md bg-grey-200"></button>
+        <button className="w-3 h-2 rounded-md bg-grey-200"></button>
+      </div>
+    </>
   );
 };
 
