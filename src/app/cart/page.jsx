@@ -174,12 +174,18 @@ const CartPage = () => {
                 <div className="flex items-center gap-2">
                   <p className="capitalize">color:</p>
                   <div className="flex gap-1">
-                    <button className="p-[1px] border-[0.025px] border-grey-200 ">
-                      <span className="block bg-orange size-4 border-[0.025px] border-grey-200"></span>
+                    <button className="p-[1px] border-[0.025px] rounded-[2px] border-light_black">
+                      <span className="block bg-orange size-4"></span>
                     </button>
-                    <button className="p-1 bg-purple size-4 border-[0.025px] border-grey-200"></button>
-                    <button className="p-1 bg-red size-4 border-[0.025px] border-grey-200"></button>
-                    <button className="p-1 bg-light_black size-4 border-[0.025px] border-grey-200"></button>
+                    <button className="p-[1px] border-[0.025px] rounded-[2px] border-grey-500">
+                      <span className="block bg-orange/70 size-4"></span>
+                    </button>
+                    <button className="p-[1px] border-[0.025px] rounded-[2px] border-grey-500">
+                      <span className="block bg-purple size-4 "></span>
+                    </button>
+                    <button className="p-[1px] border-[0.025px] rounded-[2px] border-grey-500">
+                      <span className="block bg-red size-4"></span>
+                    </button>
                   </div>
                 </div>
                 <div className="flex flex-col justify-between gap-2 mt-8 text-base font-medium lg:mt-4 md:flex-col lg:flex-row md:gap-2">

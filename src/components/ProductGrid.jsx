@@ -41,7 +41,7 @@ export const PRODUCTS_INFO = [
     inStock: true,
   },
   {
-    name: "burberry shine",
+    name: "Burberry shine",
     imageUrl: BurberryShine,
     category: "kids",
     products: [],
@@ -53,7 +53,7 @@ export const PRODUCTS_INFO = [
     inStock: true,
   },
   {
-    name: "alvero gown",
+    name: "Alvero Gown",
     imageUrl: AlveroGown,
     category: "women",
     products: [],
