@@ -20,7 +20,7 @@ const ImageWithText = () => {
             nights.
           </p>
         </div>
-        <Button className="w-full sm:w-auto text-background" />
+        <Button className="z-50 w-full sm:w-auto text-background" />
       </div>
 
       <Image
@@ -42,7 +42,7 @@ const ImageWithText = () => {
         src={SummarAdvert}
         width="400"
         height="502"
-        className="absolute top-0 bottom-0 right-0 z-10 flex-1 hidden object-cover w-full h-full md:block rounded-tr-2xl rounded-br-2xl"
+        className="absolute top-0 bottom-0 flex-1 hidden object-cover w-full h-full left-[0%] md:block rounded-tr-2xl rounded-br-2xl"
       />
     </section>
   );
