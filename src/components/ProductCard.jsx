@@ -47,12 +47,9 @@ const ProductCard = (product) => {
           </div>
           <button
             onClick={() => handleAddToCart(product, qty)}
-            className="self-end"
+            className="self-end rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background"
           >
-            <Link
-              href="/cart"
-              className=" text-sm md:text-xl font-medium rounded-xl px-12 py-[10px] md:px-[18.5px] md:py-[22px] bg-orange text-background"
-            >
+            <Link href="/cart" className="text-sm font-medium  md:text-xl">
               Add to cart
             </Link>
           </button>
