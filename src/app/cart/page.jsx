@@ -111,7 +111,10 @@ const CartPage = () => {
                     </h3>
                   </div>
                   <div className="p-2 rounded-full size-10 bg-orange">
-                    <HeartOutline strokeColor="white" />
+                    <HeartOutline
+                      strokeColor="white"
+                      className="cursor-pointer"
+                    />
                   </div>
                 </div>
                 <div className="border-b-[1.95px] border-grey-200 flex flex-col gap-2">

@@ -39,7 +39,6 @@ export default function CartProvider({ children }) {
 
       // update cart status
       setCartStatus("product is already added in a cart!");
-      setShowCart(true);
     } else {
       // if it is not in the cart then add it to the cart. then update the incart status into true
       setCartItems([
