@@ -99,8 +99,8 @@ const CartPage = () => {
                   </div>
                 </div>
                 <div className="flex flex-col justify-center gap-3 mt-4">
-                  <p>Share this product</p>
-                  <div className="flex items-center gap-2">
+                  <p className="text-lg font-thin">Share this product</p>
+                  <div className="flex items-center gap-5">
                     <Link href="/">
                       <InstaIcon strokeColor="black" />
                     </Link>
@@ -228,7 +228,7 @@ const CartPage = () => {
 
         {/* delivery & return policy */}
         <div className="flex-1 p-6 border bg-background rounded-xl border-grey-200">
-          <h3 className="pb-3 mb-6 text-2xl font-semibold border-b border-grey-200">
+          <h3 className="pb-3 mb-6 text-2xl font-semibold text-center border-b border-grey-200">
             Delivery & Return
           </h3>
           <p className="font-medium capitalize">Location</p>
